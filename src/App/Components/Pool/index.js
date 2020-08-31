@@ -13,7 +13,7 @@ const Index = (props) => {
 		populatePool([], setThumbnails);
 	}, []);
 
-	const selectionHandler = async (artist) => {
+	const selectionHandler = (artist) => {
 		props.setArtistObject(artist);
 	};
 
@@ -21,6 +21,13 @@ const Index = (props) => {
 		const artist = await loadArtistFromPool(id);
 		setOpenArtistMenu(true);
 		setArtistInMenu(artist);
+	};
+
+	const addToList = (artist) => {
+		let artistExists = props.activeList.find((rankedArtist) => rankedArtist.name === artist.name);
+		if (!artistExists) {
+			props.updateActiveList([ ...props.activeList, artist ]);
+		}
 	};
 
 	return (
@@ -49,10 +56,10 @@ const Index = (props) => {
 				<span className="close-menu-modal-button">×</span>
 				<span className="artist-menu-name">{artistInMenu.name}</span>
 				<div className="artist-menu-photo-frame">
-					<img className="artist-menu-photo" src={artistInMenu.largeImage} />
+					<img className="artist-menu-photo" src={artistInMenu.largeImage} alt={artistInMenu.name} />
 				</div>
-				<button>
-					Add <strong>{artistInMenu.name}</strong> To <strong>Top5 {props.thread}</strong>
+				<button onClick={() => addToList(artistInMenu)}>
+					Add To <strong>Top5 {props.thread}</strong>
 				</button>
 				<Link to={`/artist/${artistInMenu.id}`} onClick={() => selectionHandler(artistInMenu)}>
 					<button>

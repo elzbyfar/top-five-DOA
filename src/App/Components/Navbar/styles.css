@@ -10,12 +10,18 @@
 }
 .logo {
 	height: 5vh;
+	z-index: 5;
+	cursor: pointer;
 }
 .fa-bars {
 	right: 0;
 	color: #ffd000;
+	z-index: 5;
+	cursor: pointer;
 }
 .nav-bar-search {
 	color: #ffd000;
+	cursor: pointer;
+	z-index: 5;
 	cursor: pointer;
 }

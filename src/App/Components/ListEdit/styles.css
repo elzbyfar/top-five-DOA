@@ -1,4 +1,4 @@
-.pool-container {
+.list-edit-container {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -6,7 +6,7 @@
 	align-items: center;
 	background: linear-gradient(rgba(0, 0, 0, 0.845), #000);
 }
-.pool-header {
+.list-edit-header {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
@@ -14,12 +14,12 @@
 	height: 29vh;
 	width: 100%;
 }
-.pool-title {
+/* .pool-title {
 	font-size: 3.5vh;
 	color: #ffd000;
 	font-weight: 300;
 	font-size: 2vh;
-}
+} */
 .dropdown-closed {
 	position: absolute;
 	display: flex;
@@ -86,7 +86,7 @@
 	overflow: scroll;
 	overflow-x: hidden;
 	transition: all 0.3s ease-in-out;
-	z-index: 1;
+	z-index: 10;
 }
 .sub-category {
 	color: rgb(180, 171, 180);
@@ -126,6 +126,9 @@
 	width: 95%;
 }
 .ranked-artist {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	width: 15vw;
 	height: 15vw;
 	line-height: 15vw;
@@ -134,4 +137,111 @@
 	border-radius: 50%;
 	color: #ffd000;
 	cursor: default;
+	font-weight: 900;
+	overflow: hidden;
+	font-size: 3vh;
+}
+.ranked-artist img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+
+	opacity: 0.8;
+	transition: all .2s ease-in-out;
+}
+.ranked-artist img:hover {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	opacity: 1;
+	overflow: hidden;
+	z-index: 1;
+	transition: all .2s ease-in-out;
+	cursor: pointer;
+}
+.ranked-artist-name {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: -1;
+	font-size: 1.5vh;
+	font-weight: 500;
+	color: #ffd000;
+	width: 15vw;
+	height: 15vw;
+	line-height: 2.5vw;
+	border-radius: 50%;
+	background-color: rgba(20, 20, 20, 0.8);
+}
+.remove-artist-container {
+	position: absolute;
+	width: 15vw;
+	height: 15vw;
+	z-index: 5;
+	opacity: 0;
+	transition: all .2s ease-in-out;
+}
+.remove-artist-container:hover {
+	z-index: 5;
+	opacity: 1;
+	transition: all .2s ease-in-out;
+}
+.remove-artist {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 400;
+	margin-left: 11vw;
+	font-size: 1.5vh;
+	width: 4vw;
+	height: 4vw;
+	color: rgb(20, 20, 20);
+	background-color: rgb(175, 175, 175);
+	border-radius: 50%;
+}
+.remove-artist:hover {
+	background-color: rgb(240, 240, 240);
+	color: rgb(0, 0, 0);
+	cursor: pointer;
+}
+.additional-artists-count {
+	position: absolute;
+	border-radius: 50%;
+	font-size: 2.2vh;
+	width: 4vh;
+	height: 4vh;
+	line-height: 4vh;
+	font-weight: 300;
+	margin-left: 15vw;
+	margin-top: 7vh;
+	background-color: rgb(20, 20, 20);
+	border: 1px solid #ffd000;
+	opacity: 1;
+	transition: all .2s ease-in-out;
+}
+.additional-artists-count:hover {
+	opacity: 0;
+}
+.edit-ranked-artists {
+	position: absolute;
+	font-weight: 300;
+	font-size: 2vh;
+	width: 4vh;
+	height: 4vh;
+	line-height: 4vh;
+	border-radius: 15px;
+	margin-left: 15vw;
+	margin-top: 7vh;
+	cursor: pointer;
+	opacity: 0;
+	border: 1px solid #ffd000;
+	z-index: 5;
+	background-color: rgb(20, 20, 20);
+	transition: all .2s ease-in-out;
+}
+.edit-ranked-artists:hover {
+	opacity: 1;
+	width: 5vh;
 }

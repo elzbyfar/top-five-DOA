@@ -12,6 +12,7 @@ const loadArtistFromPool = async (id) => {
 	const data = await result.json();
 
 	const artistAdapter = {
+		id: data.id,
 		about: data.about,
 		name: data.name,
 		genres: data.genres,

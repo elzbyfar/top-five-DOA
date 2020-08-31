@@ -15,13 +15,16 @@ const index = (props) => {
 				<input
 					type="text"
 					className="search-bar"
+					style={{ width: props.searchBar ? '35vw' : '5vw', transition: 'all 0.3s ease-in-out' }}
 					value={props.artistName}
 					onChange={(e) => props.setArtistName(e.target.value)}
 				/>
 				<i
-					className="fa fa-search search-bar-icon"
+					className="fa fa-lg fa-search search-bar-icon"
+					style={{ opacity: props.searchBar ? 1 : 0, transition: 'all 0.3s ease-in-out' }}
 					onClick={(event) => {
 						event.preventDefault();
+						props.showSearchBar(false);
 						submitHandler();
 					}}
 				/>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ArtistProfile from './Components/ArtistProfile';
-import PoolBrowser from './Components/PoolBrowser';
+import ListEdit from './Components/ListEdit';
 import Navbar from './Components/Navbar';
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
@@ -11,14 +11,15 @@ const _private_keys = {
 };
 
 function App() {
+	// show or hide searchbar
 	const [ searchBar, showSearchBar ] = useState(false);
 	// set artist name from search bar
 	const [ artistName, setArtistName ] = useState('');
 	// set artist object after search or selection
 	const [ artistObject, setArtistObject ] = useState({});
-
+	// open or close dropdown menue
 	const [ dropdownOpen, setDropdownOpen ] = useState(false);
-
+	// select thread from dropdown
 	const [ thread, setThread ] = useState('Rappers of All Time');
 
 	return (
@@ -29,7 +30,7 @@ function App() {
 					<Route
 						path="/pool"
 						render={() => (
-							<PoolBrowser
+							<ListEdit
 								artistObject={artistObject}
 								setArtistObject={setArtistObject}
 								artistName={artistName}
@@ -38,6 +39,8 @@ function App() {
 								setDropdownOpen={setDropdownOpen}
 								thread={thread}
 								setThread={setThread}
+								searchBar={searchBar}
+								showSearchBar={showSearchBar}
 							/>
 						)}
 					/>
