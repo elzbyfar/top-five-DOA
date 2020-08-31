@@ -1,5 +1,5 @@
 import React from 'react';
-import Pool from './Pool';
+import Pool from '../Pool';
 import './styles.css';
 import '../Navbar/styles.css';
 // import SearchBar from '../ArtistProfile/SearchBar';

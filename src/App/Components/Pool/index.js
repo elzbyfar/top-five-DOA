@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import populatePool from '../../API/getThumbnails';
 import loadArtistFromPool from '../../API/loadArtistFromPool';
+import './styles.css';
 
-const Pool = (props) => {
+const Index = (props) => {
 	const [ thumbnails, setThumbnails ] = useState([]);
 	const [ openArtistMenu, setOpenArtistMenu ] = useState(false);
 	const [ artistInMenu, setArtistInMenu ] = useState({});
@@ -13,7 +14,6 @@ const Pool = (props) => {
 	}, []);
 
 	const selectionHandler = async (artist) => {
-		// const artist = await loadArtistFromPool(id);
 		props.setArtistObject(artist);
 	};
 
@@ -64,4 +64,4 @@ const Pool = (props) => {
 	);
 };
 
-export default Pool;
+export default Index;

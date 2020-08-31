@@ -1,7 +1,8 @@
 import React from 'react';
 import buildArtistProfile from '../../Helpers/buildArtistProfile';
+import './styles.css';
 
-const SearchBar = (props) => {
+const index = (props) => {
 	const submitHandler = async () => {
 		const artist = await buildArtistProfile(props.artistName, props.keys);
 		props.setArtistObject(artist);
@@ -37,4 +38,4 @@ const SearchBar = (props) => {
 	);
 };
 
-export default SearchBar;
+export default index;
