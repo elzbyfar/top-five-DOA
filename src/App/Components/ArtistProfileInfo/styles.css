@@ -1,0 +1,96 @@
+.artist-name-container {
+	display: flex;
+	width: 100%;
+}
+.artist-name {
+	color: #ffd000;
+	text-shadow: 0px 0px 40px rgb(3, 3, 3);
+	text-align: center;
+	width: 100vw;
+	margin-top: 44vh;
+	height: 5vh;
+	font-weight: 800;
+	font-size: 4vh;
+}
+.add-button {
+	position: absolute;
+	width: 4vh;
+	height: 4vh;
+	line-height: 3.9vh;
+	margin: 3px 0 0 20px;
+	border-radius: 50%;
+	color: rgba(0, 0, 0, 0.815);
+	font-size: 3.8vh;
+	background-color: #ffd000;
+	border: none;
+	transition: all 0.5s ease-in-out;
+}
+.add-button:hover {
+	color: #ffd000;
+	background-color: black;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+.info-scroll {
+	display: flex;
+	flex-direction: column;
+	bottom: 0;
+	margin-top: -2vh;
+	height: 49vh;
+	width: 100vw;
+	bottom: 0;
+	font-weight: 200;
+	color: rgb(252, 247, 217);
+	align-items: center;
+	overflow: scroll;
+	overflow-x: hidden;
+	background: linear-gradient(transparent, rgb(0, 0, 0));
+}
+.top-songs-title {
+	margin: 1vh 0 -1vh 0;
+}
+.song-list {
+	margin: 3vh 0 1vh 0;
+}
+.song-list li {
+	text-align: left;
+	font-size: 2.1vh;
+	width: 88vw;
+	margin-bottom: 1vh;
+}
+.artist-bio {
+	width: 90vw;
+	margin-top: 1vh;
+}
+.sub-title {
+	font-size: 3vh;
+	text-align: center;
+	font-weight: 700;
+	color: #ffd000;
+}
+.sub-stats {
+	display: flex;
+	width: 90%;
+	justify-content: space-evenly;
+	margin-top: 1vh;
+}
+.sub-stat {
+	display: flex;
+	flex-direction: column;
+	width: 25vw;
+}
+.sub-stat .sub-title {
+	font-size: 2.1vh;
+	text-align: center;
+}
+.sub-stat .value {
+	font-size: 1.8vh;
+}
+.value {
+	font-weight: 200;
+	font-size: 2vh;
+}
+.genres {
+	width: 95vw;
+	margin-bottom: 2vh;
+}

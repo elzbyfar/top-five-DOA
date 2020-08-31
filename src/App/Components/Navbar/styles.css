@@ -1,0 +1,21 @@
+.nav {
+	position: fixed;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 95%;
+	height: 7vh;
+	padding: 0 2.5%;
+	background-color: rgb(10, 10, 10);
+}
+.logo {
+	height: 5vh;
+}
+.fa-bars {
+	right: 0;
+	color: #ffd000;
+}
+.nav-bar-search {
+	color: #ffd000;
+	cursor: pointer;
+}
